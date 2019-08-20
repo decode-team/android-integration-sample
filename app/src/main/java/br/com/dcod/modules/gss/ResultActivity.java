@@ -27,7 +27,7 @@ public class ResultActivity extends AppCompatActivity {
             String message = "Serviço " + idServico + " do contrato " + idContrato + " finalizado." +
                     "\nAuditorias realizadas com sucesso: " + qtdeAuditoriasViaveis + " de " + qtdeAuditorias +
                     " (" + qtdeAuditoriasInviaveis + " inviáveis)." +
-                    "\nTempo médio de captura: " + tempoMedioAuditorias +
+                    "\nTempo médio por captura: " + tempoMedioAuditorias +
                     "\nObservação: " + observacao;
 
             ((TextView) findViewById(R.id.report)).setText(message);
