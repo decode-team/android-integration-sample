@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("module", "aegea-gss");
 
                 /* Module-specific content */
-                intent.putExtra("idServico",100);
-                intent.putExtra("idContrato",50);
+                intent.putExtra("idServico","100");
+                intent.putExtra("idContrato","50");
                 intent.putExtra("nrRota","A/1");
                 intent.putExtra("cdEquipe","E1");
                 intent.putExtra("nmEquipe","Equipe 1");
 
-                intent.putExtra("idFuncionario",10);
+                intent.putExtra("idFuncionario","10");
                 intent.putExtra("nmNome","Pedro");
                 intent.putExtra("nrMatricula","M1020");
 
