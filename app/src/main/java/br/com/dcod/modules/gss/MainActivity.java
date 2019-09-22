@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,10 +26,15 @@ public class MainActivity extends AppCompatActivity {
                 intent.setAction("br.com.dcod.droid.action.AUDIT");
                 intent.putExtra("module", "aegea-gss");
 
+
+                Random rand = new Random();
+                int route = rand.nextInt(5);
+                int group = rand.nextInt(5);
+
                 /* Module-specific content */
                 intent.putExtra("idServico","100");
                 intent.putExtra("idContrato","50");
-                intent.putExtra("nrRota","A/1");
+                intent.putExtra("nrRota", route + "/" + group);
                 intent.putExtra("cdEquipe","E1");
                 intent.putExtra("nmEquipe","Equipe 1");
 
