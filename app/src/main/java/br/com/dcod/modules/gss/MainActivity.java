@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.go5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                requestDecodeRoute(getNewRequestId(), "1", "5");
+                requestDecodeRoute(getNewRequestId(), "1", "3");
             }
         });
     }

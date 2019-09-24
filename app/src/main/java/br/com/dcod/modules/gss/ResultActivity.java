@@ -18,11 +18,11 @@ public class ResultActivity extends AppCompatActivity {
         if(reportIntent != null) {
             int idServico = reportIntent.getIntExtra("idServico", 0);
             int idContrato = reportIntent.getIntExtra("idContrato", 0);
-            int qtdeAuditorias = reportIntent.getIntExtra("qtdeAuditorias", 0);
-            int qtdeAuditoriasViaveis = reportIntent.getIntExtra("qtdeAuditoriasViaveis", 0);
-            int qtdeAuditoriasInviaveis = reportIntent.getIntExtra("qtdeAuditoriasInviaveis", 0);
-            String tempoMedioAuditorias = reportIntent.getStringExtra("tempoMedioAuditorias");
-            String observacao = reportIntent.getStringExtra("observacao");
+            int qtdeAuditorias = reportIntent.getIntExtra("auditoriaLeituraQtdeAuditorias", 0);
+            int qtdeAuditoriasViaveis = reportIntent.getIntExtra("auditoriaLeituraQtdeAuditoriasViaveis", 0);
+            int qtdeAuditoriasInviaveis = reportIntent.getIntExtra("auditoriaLeituraQtdeAuditoriasInviaveis", 0);
+            String tempoMedioAuditorias = reportIntent.getStringExtra("auditoriaLeituraTempoMedioAuditorias");
+            String observacao = reportIntent.getStringExtra("auditoriaLeituraObservacao");
 
             String message = "Serviço " + idServico + " do contrato " + idContrato + " finalizado." +
                     "\nAuditorias realizadas com sucesso: " + qtdeAuditoriasViaveis + " de " + qtdeAuditorias +
