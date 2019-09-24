@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 requestDecodeRoute(getNewRequestId(), "1", "3");
             }
         });
+        findViewById(R.id.go6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestDecodeRoute("999999", "1", "1");
+            }
+        });
     }
 
     private String getNewRequestId() {

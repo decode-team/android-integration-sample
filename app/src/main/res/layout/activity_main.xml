@@ -58,6 +58,13 @@
             android:layout_gravity="center"
             />
 
+        <Button
+            android:id="@+id/go6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grupo 1, Rota 1 com idServiço fixo"
+            android:layout_gravity="center"
+            />
 
     </LinearLayout>
 
