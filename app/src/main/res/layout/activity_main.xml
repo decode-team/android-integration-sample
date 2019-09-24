@@ -6,15 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/go"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/go1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grupo 1, Rota 1"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/go2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grupo 1, Rota 2"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/go3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grupo 2, Rota 1"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/go4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grupo 2, Rota 2"
+            android:layout_gravity="center"
+            />
+
+
+        <Button
+            android:id="@+id/go5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grupo 1, Rota 3 (inexistente)"
+            android:backgroundTint="#F00"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
