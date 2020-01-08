@@ -16,53 +16,25 @@
         android:orientation="vertical"
         >
 
-        <Button
-            android:id="@+id/go1"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/reqGroupId"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Grupo 1, Rota 1"
-            android:layout_gravity="center"
+            android:hint="Grupo"
+            />
+
+        <EditText
+            android:id="@+id/reqRouteId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rota (Tarefa)"
             />
 
         <Button
-            android:id="@+id/go2"
+            android:id="@+id/go"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Grupo 1, Rota 2"
-            android:layout_gravity="center"
-            />
-
-        <Button
-            android:id="@+id/go3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Grupo 2, Rota 1"
-            android:layout_gravity="center"
-            />
-
-        <Button
-            android:id="@+id/go4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Grupo 2, Rota 2"
-            android:layout_gravity="center"
-            />
-
-
-        <Button
-            android:id="@+id/go5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Grupo 1, Rota 3 (inexistente)"
-            android:backgroundTint="#F00"
-            android:layout_gravity="center"
-            />
-
-        <Button
-            android:id="@+id/go6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Grupo 1, Rota 1 com idServiço fixo"
+            android:text="Iniciar"
             android:layout_gravity="center"
             />
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Random;
@@ -16,46 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.go1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.go).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                requestDecodeRoute(getNewRequestId(), "1", "1");
+                String groupId = ((EditText) findViewById(R.id.reqGroupId)).getText().toString();
+                String routeId = ((EditText) findViewById(R.id.reqRouteId)).getText().toString();
+
+                requestDecodeRoute(getNewRequestId(), groupId, routeId);
             }
         });
 
-        findViewById(R.id.go2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                requestDecodeRoute(getNewRequestId(), "1", "2");
-            }
-        });
-
-        findViewById(R.id.go3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                requestDecodeRoute(getNewRequestId(), "2", "1");
-            }
-        });
-
-        findViewById(R.id.go4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                requestDecodeRoute(getNewRequestId(), "2", "2");
-            }
-        });
-
-        findViewById(R.id.go5).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                requestDecodeRoute(getNewRequestId(), "1", "3");
-            }
-        });
-        findViewById(R.id.go6).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                requestDecodeRoute("999999", "1", "1");
-            }
-        });
     }
 
     private String getNewRequestId() {
@@ -73,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         /* Module-specific content */
         intent.putExtra("idServico","" + requestId);
         intent.putExtra("idContrato","50");
-        intent.putExtra("nrRota", routeId + "/" + groupId);
+        intent.putExtra("nrRota", groupId + "/" + routeId);
         intent.putExtra("cdEquipe","E1");
         intent.putExtra("nmEquipe","Equipe 1");
 
