@@ -12,6 +12,9 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String LEGACY_AUDIT_ACTION = "br.com.dcod.droid.action.AUDIT";
+    public static final String AUDIT_ACTION = "systems.decode.droid.action.AUDIT";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +23,26 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.go).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String requestId = ((EditText) findViewById(R.id.reqReqId)).getText().toString();
                 String groupId = ((EditText) findViewById(R.id.reqGroupId)).getText().toString();
                 String routeId = ((EditText) findViewById(R.id.reqRouteId)).getText().toString();
 
-                requestDecodeRoute(getNewRequestId(), groupId, routeId);
+                requestDecodeRoute(requestId, groupId, routeId, AUDIT_ACTION);
             }
         });
+
+        findViewById(R.id.legacyGo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String requestId = ((EditText) findViewById(R.id.reqReqId)).getText().toString();
+                String groupId = ((EditText) findViewById(R.id.reqGroupId)).getText().toString();
+                String routeId = ((EditText) findViewById(R.id.reqRouteId)).getText().toString();
+
+                requestDecodeRoute(requestId, groupId, routeId, LEGACY_AUDIT_ACTION);
+            }
+        });
+
+        ((EditText) findViewById(R.id.reqReqId)).setText(getNewRequestId());
 
     }
 
@@ -33,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         return "" + (100000 + new Random().nextInt(900000));
     }
 
-    private void requestDecodeRoute(String requestId, String groupId, String routeId) {
+    private void requestDecodeRoute(String requestId, String groupId, String routeId, String action) {
 
         /* Configure the intent with the required parameters */
         Intent intent = new Intent();
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setAction("br.com.dcod.droid.action.AUDIT");
+        intent.setAction(action);
         intent.putExtra("module", "aegea-gss");
 
         /* Module-specific content */
